@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | AquaMistroot Garden Services</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Color Theme */
+        :root {
+            --primary: #88c9d1;
+            --secondary: #5a8f7b;
+            --accent: #e6f4f1;
+            --dark: #2c4a3e;
+            --light: #f8fbfa;
+            --text: #333333;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .terms-point {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .terms-point h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="p1.png" alt="AquaMistroot Logo" class="logo">
+        <h1>Terms of Service</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+        <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+        <li><a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a></li>
+        <li><a href="cookies.html"tabindex="0">Cookies</a></li>
+        <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2>AquaMistroot Garden Services Agreement</h2>
+            <p>Welcome to AquaMistroot Garden Services. These Terms of Service ("Terms") govern your access to and use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy. Please read them carefully before using our services.</p>
+            
+            <div class="terms-point">
+                <h4>1. Acceptance of Terms</h4>
+                <p>By accessing or using AquaMistroot's services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you don't agree, you may not use our services. These Terms constitute a legally binding agreement between you and AquaMistroot Garden Services. We may modify these Terms at any time, with changes effective upon posting. Your continued use after modifications constitutes acceptance. These Terms supersede prior agreements and govern our entire relationship. Certain services may have additional terms that supplement these Terms.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>2. Service Description</h4>
+                <p>AquaMistroot provides specialized garden irrigation services focusing on mist systems that promote root health. Our services include installation, maintenance, consultation, and related products. Service availability varies by location and season. We reserve the right to modify or discontinue services without notice. Descriptions of services on our website are for informational purposes only and don't constitute guarantees. Actual services may differ based on site conditions and client needs. We're not responsible for any errors in service descriptions. Some services require professional installation by our technicians.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>3. Eligibility</h4>
+                <p>Our services are available only to individuals aged 18+ or legal entities that can form binding contracts. By using our services, you represent you meet these requirements. Minors may only use our services with parental supervision. We may refuse service to anyone at our discretion. Certain services have additional eligibility requirements like property ownership verification. Businesses must authorize representatives to contract on their behalf. We may require proof of eligibility before providing services. Violation of eligibility requirements constitutes breach of these Terms.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>4. Account Registration</h4>
+                <p>Some services require account creation. You must provide accurate, complete information and keep it updated. You're responsible for all activities under your account. Keep login credentials confidential and notify us immediately of unauthorized use. We may suspend accounts with inaccurate information or suspected security breaches. Accounts are non-transferable. We reserve the right to refuse registration or cancel accounts at our discretion. You may close your account by contacting customer service, though some information may be retained as required by law.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>5. Service Fees and Payments</h4>
+                <p>Service fees are listed on our website or provided in estimates. We may change prices with 30 days' notice for ongoing services. You're responsible for all applicable taxes. Payments are due as specified in invoices. Late payments incur 1.5% monthly interest. We accept various payment methods as indicated during checkout. Recurring payments require valid payment information. Failed payments may result in service suspension. Refunds are issued according to our Refund Policy. Special promotions may have additional terms regarding payments.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>6. Service Appointments</h4>
+                <p>Scheduled service appointments require 48 hours' notice for cancellation/rescheduling to avoid fees. We'll make reasonable efforts to arrive within scheduled time windows but aren't liable for delays. Clients must ensure safe access to service areas. Missed appointments may incur fees. Some services require client presence during performance. We may refuse service if conditions are unsafe or unsuitable. Service completion depends on site conditions and equipment functionality. Additional services identified during appointments require separate authorization.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>7. Property Access</h4>
+                <p>By scheduling services, you authorize our personnel to access designated property areas during service windows. You're responsible for securing pets and notifying us of access restrictions. We're not liable for pre-existing property conditions. Our personnel will follow reasonable property rules if notified in advance. We recommend removing valuables from service areas. Some services may require utility shutoffs—we'll coordinate these when possible. Property damage caused by our negligence will be repaired at our expense following proper notification.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>8. Intellectual Property</h4>
+                <p>All content on our website and materials provided with services are our property or licensed to us. You may use materials only for personal, non-commercial purposes related to our services. Unauthorized use violates copyright and other laws. Our trademarks may not be used without written permission. Service designs and configurations are proprietary. Feedback you provide becomes our property to use without restriction. You retain rights to your pre-existing materials, granting us license to use them for service provision. Reverse engineering our systems is prohibited.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>9. User Content</h4>
+                <p>You may submit content like reviews or forum posts. By submitting, you grant us royalty-free license to use it worldwide. You represent you have necessary rights to the content. We may remove content at our discretion. Don't submit confidential or proprietary information. User content must comply with our Acceptable Use Policy. We're not responsible for user content accuracy. You may request removal of your content by contacting us. Content may remain in backups after deletion. We may use anonymized content for research and improvement.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>10. Acceptable Use</h4>
+                <p>Our services must be used lawfully and as intended. Prohibited uses include: illegal activities, harassment, fraud, spreading malware, unauthorized access, and interfering with services. Commercial use requires prior authorization. Automated queries must follow our robots.txt file. Bandwidth abuse may result in throttling or suspension. You're responsible for others' use of your account. We may investigate suspected violations. Violations may result in service termination and legal action. You must comply with all applicable laws and regulations.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>11. Service Limitations</h4>
+                <p>Our services have natural limitations based on environmental factors we can't control. Irrigation effectiveness depends on proper installation, maintenance, and local conditions. We don't guarantee specific plant growth results. Services may be unavailable due to maintenance, outages, or other factors. Some areas may have limited service availability. System performance depends on proper water pressure and quality. Our liability for service limitations is outlined in these Terms. You're responsible for understanding service capabilities and constraints before purchase.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>12. Third-Party Services</h4>
+                <p>Our services may integrate with or require third-party services like payment processors. We're not responsible for third-party services' performance or terms. Use of third-party services is at your own risk. Some integrations may require you to accept additional terms. We don't endorse or guarantee third-party services. Issues with third-party services should be resolved directly with the provider. We may discontinue integrations at any time. Data shared with third parties is governed by their privacy policies, not ours.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>13. Warranties and Disclaimers</h4>
+                <p>Services are provided "as is" without warranties except as expressly stated. We disclaim all implied warranties including merchantability and fitness for purpose. We don't warrant services will be uninterrupted or error-free. Some jurisdictions don't allow warranty exclusions, so some may not apply to you. Product warranties are provided by manufacturers and may require registration. Service warranties are outlined in service agreements. Our liability is limited as permitted by law. You assume all risks associated with service use.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>14. Limitation of Liability</h4>
+                <p>To the maximum extent permitted by law, we're not liable for indirect, incidental, or consequential damages arising from service use. Our total liability for any claim is limited to fees you paid for the relevant services. Some jurisdictions don't allow liability limitations, so these may not apply to you. We're not liable for events beyond our reasonable control. Claims must be filed within one year of the incident. This limitation applies even if we've been advised of potential damages. Professional advice should be sought for important decisions.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>15. Indemnification</h4>
+                <p>You agree to indemnify and hold harmless AquaMistroot and its affiliates from claims arising from your breach of these Terms, misuse of services, or violation of laws. This includes legal fees and damages. We'll notify you of any claim requiring indemnification and cooperate in your defense. You may not settle any claim that imposes obligations on us without our consent. Our failure to enforce this right doesn't waive it. This indemnification survives termination of these Terms. You're responsible for losses caused by those accessing services through your account.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>16. Termination</h4>
+                <p>We may terminate or suspend your access to services immediately for breach of these Terms without notice. You may stop using our services anytime. Upon termination: your right to use services ceases, you must pay outstanding fees, and we may delete your data as permitted by law. Some provisions survive termination including intellectual property, disclaimers, and limitations of liability. We're not liable for termination's consequences. Service contracts may have specific termination provisions that supplement these Terms. Reactivation after termination may require fees.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>17. Dispute Resolution</h4>
+                <p>Most disputes can be resolved by contacting customer service. If unresolved, disputes shall be resolved through binding arbitration under AAA rules, with hearings in New York, NY. Class actions and jury trials are waived. Small claims may be brought in your local jurisdiction. The prevailing party may recover legal fees. Claims must be filed within one year of the incident. Some jurisdictions limit arbitration requirements, so this may not apply to you. These Terms are governed by New York law without regard to conflict of law provisions.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>18. Force Majeure</h4>
+                <p>We're not liable for failure to perform due to events beyond our reasonable control including natural disasters, wars, terrorism, riots, embargoes, acts of civil or military authorities, fires, floods, accidents, strikes, shortages, or utility failures ("Force Majeure"). During Force Majeure events, our obligations are suspended. We'll make reasonable efforts to notify you of service disruptions. If Force Majeure lasts over 30 days, either party may terminate affected services without penalty. This provision doesn't excuse payment obligations for services already rendered.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>19. Changes to Terms</h4>
+                <p>We may modify these Terms at any time by posting updated versions on our website. Material changes will be notified via email or website notice 30 days before taking effect. Your continued use after changes constitutes acceptance. It's your responsibility to review Terms periodically. The "Last Updated" date indicates when changes were made. Archived versions are available upon request. If you don't agree to changes, you must stop using our services. Service-specific terms may be updated separately with appropriate notice.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>20. Entire Agreement</h4>
+                <p>These Terms, with our Privacy Policy and any service-specific terms, constitute the entire agreement regarding our services, superseding prior agreements. If any provision is found invalid, the remainder remains enforceable. Our failure to enforce any right doesn't waive it. You may not assign these Terms without our consent; we may assign them freely. Notices must be in writing and sent to our corporate address. Headings are for convenience only. The parties are independent contractors. No third party has rights under these Terms.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>21. Service Guarantees</h4>
+                <p>Our services come with a 90-day workmanship guarantee covering defects in installation. Product warranties are provided by manufacturers. Guarantees require proper maintenance and don't cover damage from misuse, neglect, or external factors. Claims must be made in writing within the guarantee period. We'll repair or re-perform guaranteed services at our discretion. Some exclusions apply as detailed in service agreements. Guarantees are void if unauthorized modifications are made. Extended warranties may be available for purchase. This is your sole remedy for guaranteed issues.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>22. Maintenance Requirements</h4>
+                <p>Proper system maintenance is essential for optimal performance. Clients are responsible for routine maintenance like nozzle cleaning and seasonal adjustments unless under maintenance contracts. Winterization may be required in cold climates. We offer maintenance services that include periodic inspections and adjustments. Failure to perform recommended maintenance may void warranties. Maintenance schedules vary by system type and local conditions. We provide maintenance guidelines with each installation. Neglect may lead to reduced efficiency and premature system failure.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>23. Water Usage</h4>
+                <p>Our systems are designed for water efficiency but actual usage depends on configuration, runtime, and local conditions. We're not responsible for water bills or restrictions in your area. Clients should monitor local water regulations. Some systems include water-saving features that can be adjusted. Proper scheduling maximizes efficiency. We recommend using rain sensors where available. Water pressure variations may affect performance. Leaks should be reported immediately. Conservation is encouraged—we can help optimize settings for efficiency.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>24. System Monitoring</h4>
+                <p>Some systems include remote monitoring capabilities. By using these features, you consent to data collection about system performance. Monitoring helps identify issues early but doesn't replace regular maintenance. You're responsible for responding to alerts. Monitoring services may require additional fees. Data is used to improve services and may be aggregated for research. Some systems allow third-party integrations—review those services' terms separately. We're not liable for monitoring service interruptions. You may disable monitoring features but this may limit functionality.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>25. Professional Installation</h4>
+                <p>Our systems require professional installation for proper function and warranty coverage. DIY installation voids warranties and may create hazards. Our technicians are trained and certified for safe installation. Installation includes site assessment, system design, and testing. Some sites may require modifications before installation. Installation timelines vary by project complexity. We coordinate with other trades when needed. Permits may be required—we'll advise but you're responsible for obtaining them. Installation fees are separate from equipment costs.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>26. Product Compatibility</h4>
+                <p>Our systems are designed to work with specified components. Using incompatible parts may void warranties and reduce performance. We can't guarantee third-party product compatibility. Recommended replacement parts are available through us. Modifications should only be made by authorized technicians. Some systems require specific water quality—we'll advise on pretreatment if needed. Compatibility issues should be reported immediately. Retrofit kits may be available for older systems. Performance may vary with non-standard configurations.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>27. Safety Guidelines</h4>
+                <p>Our systems must be used according to safety guidelines provided. Electrical components should only be serviced by qualified personnel. Keep systems clear of obstructions. Report damage immediately. Some maintenance tasks require system shutdown. Safety gear may be needed for certain procedures—we'll provide guidance. Children and pets should be supervised near operating systems. Winter precautions prevent freeze damage. Proper grounding is essential for electrical safety. We're not liable for injuries from misuse or unauthorized modifications.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>28. Environmental Compliance</h4>
+                <p>Our systems are designed to meet environmental regulations where installed. You're responsible for complying with local water use rules. Some areas restrict irrigation times or require permits. We'll advise on known regulations but you should verify current requirements. Rain sensors or moisture meters may be mandated in your area. Backflow prevention devices are often required—we include these where needed. Report any environmental concerns immediately. We strive to minimize our ecological impact through water-efficient designs.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>29. Service Areas</h4>
+                <p>We currently serve the New York metropolitan area with some services available in surrounding regions. Service availability is confirmed during scheduling. Travel fees may apply outside our primary area. Some remote locations may have limited service options. We're expanding our service areas—check our website for updates. Temporary service suspensions may occur in extreme weather. Commercial services may have different service areas than residential. Special arrangements can sometimes be made for unique projects outside normal areas.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>30. Emergency Services</h4>
+                <p>Emergency repairs are available for critical system failures during business hours. After-hours emergencies incur additional fees. Non-emergency issues are scheduled during normal hours. Define what constitutes an emergency (e.g., major leaks, electrical hazards). We prioritize emergencies but response times vary. Temporary fixes may be applied until full repairs can be made. Have your system information ready when reporting emergencies. Some emergencies may require utility company involvement. Regular maintenance reduces emergency occurrences.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>31. Cancellation Policy</h4>
+                <p>Service contracts may be cancelled with 30 days' written notice. Cancellation fees may apply for unfinished projects or discounted services. Prepaid services may be refunded pro-rata minus cancellation fees. Equipment purchases are generally non-refundable unless defective. Scheduled appointments require 48 hours' notice for cancellation without fees. We reserve the right to cancel services for safety concerns or contractual breaches. Special promotions may have unique cancellation terms. Death or disability cancellations require documentation for fee waivers.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>32. Referral Program</h4>
+                <p>Our referral program offers credits for successful referrals. Referrals must be new customers who complete qualified services. Credits are applied after referred services are paid in full. There's no limit on referrals but we may change program terms with notice. Referral credits aren't transferable or redeemable for cash. Fraudulent referrals void all credits and may result in account termination. Employees and their families aren't eligible. Other restrictions may apply—see program details for current terms. We may modify or discontinue the program anytime.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>33. Satisfaction Guarantee</h4>
+                <p>We offer a 30-day satisfaction guarantee on most services. Dissatisfaction must be reported in writing within the guarantee period. We'll make reasonable efforts to address concerns at no additional cost. If unresolved, you may receive a prorated refund. Guarantee excludes normal wear and changes of mind. Some services have modified guarantee terms as specified in service agreements. Guarantee requires opportunity to correct issues before refund requests. Pre-existing conditions not addressed in the original scope are excluded. This is your sole remedy for dissatisfaction.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>34. Insurance Coverage</h4>
+                <p>We carry general liability and workers' compensation insurance as required by law. Certificate of insurance is available upon request. You're responsible for your own property insurance. Our insurance doesn't cover pre-existing conditions or unrelated damages. Claims must be filed promptly with supporting documentation. Some projects may require additional insured status—arrangements must be made in advance. We're not responsible for acts of nature or third-party damages. Insurance terms and coverage limits are available from our office.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>35. Employee Conduct</h4>
+                <p>Our employees are trained professionals who will treat your property with respect. They'll identify themselves and explain work being performed. Tips are appreciated but never expected. Please report any concerns about conduct immediately. Employees aren't authorized to modify contracts or accept cash payments. For safety, don't distract workers during hazardous operations. Photography of work in progress is permitted for non-commercial purposes. Employees may decline requests outside work scope. Harassment of our staff won't be tolerated.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>36. Project Delays</h4>
+                <p>While we strive to meet projected timelines, some delays are unavoidable due to weather, material availability, or unforeseen site conditions. We'll communicate delays promptly and work to minimize impacts. Delay claims must account for reasonable contingencies. We're not liable for consequential damages from delays. Some projects have liquidated damages provisions specified in contracts. Keeping decision makers available helps prevent delays. Change orders may extend timelines. Regular communication helps manage delay impacts.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>37. Change Orders</h4>
+                <p>Changes to project scope require written change orders signed by both parties. Verbal change requests aren't binding. Change orders detail cost and schedule impacts. Work shouldn't proceed on changes without approved orders. Small changes may be documented via email. Disputed changes should be resolved before work continues. Emergency changes will be documented afterward. We reserve the right to charge for change order preparation. Some contracts limit change order frequency. Clear communication prevents change order disputes.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>38. Disposal Services</h4>
+                <p>We include disposal of installation debris unless local regulations require special handling. Hazardous materials disposal is your responsibility. Recycling is practiced when feasible. Large projects may generate more waste than we can remove—alternate arrangements can be made. Some areas have disposal fees that will be itemized. Retaining old equipment is your option. We're not responsible for disposal after leaving the site. Proper disposal helps us maintain environmentally responsible practices.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>39. Training Services</h4>
+                <p>Basic system operation training is included with installations. Advanced training sessions are available for additional fees. Training ensures you get maximum benefit from your system. We provide written manuals and quick-reference guides. Training should be scheduled when all decision makers can attend. Refresher training is recommended annually. Some systems include online training modules. Proper training reduces service calls and improves system longevity. We certify staff on all systems we install. Training is tailored to your technical comfort level.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h4>40. Contact Information</h4>
+                <p>For questions about these Terms, contact us at legal@aquamistroot.com or by mail at our corporate address. Customer service can be reached at (212) 555-0198 during business hours. Legal notices must be sent via certified mail to our corporate office. We aim to respond to all inquiries within two business days. After-hours messages are returned next business day. For service emergencies, use our emergency contact number provided after installation. Different departments may have specific contact methods—refer to your service documents.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            
+            <div class="contact-info">
+                <p>13 Washington Square S, New York, NY 10012, USA</p>
+                <p>Phone: (212) 555-0198 | Email: info@aquamistroot.com</p>
+            </div>
+            
+            <p class="copyright">© 2023 AquaMistroot Garden Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

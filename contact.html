@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AquaMistroot Garden Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Color Theme */
+        :root {
+            --primary: #88c9d1;
+            --secondary: #5a8f7b;
+            --accent: #e6f4f1;
+            --dark: #2c4a3e;
+            --light: #f8fbfa;
+            --text: #333333;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .contact-point {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-point h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--dark);
+        }
+
+        /* Contact Info Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Map */
+        .map-container {
+            height: 400px;
+            margin-top: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            background-color: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            background-color: white;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+            }
+            
+            .footer-links a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="p1.png" alt="AquaMistroot Logo" class="logo">
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0" aria-current="page">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2>Get in Touch with AquaMistroot</h2>
+            <p>We're here to help with all your garden irrigation needs. Whether you have questions about our services, need a consultation, or want to schedule maintenance, our team is ready to assist you. Below you'll find multiple ways to reach us, along with answers to common questions and a convenient contact form.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Support</h3>
+                    <p>Our customer service team is available Monday-Friday, 8am-6pm EST, and Saturday 9am-2pm EST.</p>
+                    <p><strong>Main:</strong> (212) 555-0198</p>
+                    <p><strong>Emergency:</strong> (212) 555-0199</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email and we'll respond within 24 hours during business days.</p>
+                    <p><strong>General Inquiries:</strong> info@aquamistroot.com</p>
+                    <p><strong>Support:</strong> support@aquamistroot.com</p>
+                    <p><strong>Billing:</strong> billing@aquamistroot.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🏢</div>
+                    <h3>Visit Us</h3>
+                    <p>Our headquarters is located in Greenwich Village, New York City. Appointments recommended.</p>
+                    <p><strong>Address:</strong><br>13 Washington Square S<br>New York, NY 10012</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.017581147479!2d-73.99900392453364!3d40.73082397139178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a7a1eccd9%3A0x3b4e1e1b9a6d6b1b!2sWashington%20Square%20S%2C%20New%20York%2C%20NY%2010012!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="installation">System Installation</option>
+                            <option value="maintenance">Regular Maintenance</option>
+                            <option value="repair">Emergency Repair</option>
+                            <option value="consultation">Design Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message*</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>1. What are your business hours?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our main office is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturdays from 9:00 AM to 2:00 PM. Field service hours vary by season, with our technicians typically available from 7:00 AM to 7:00 PM during peak seasons. Emergency services are available 24/7 with our on-call team. Administrative staff respond to emails and voicemails during business hours only. Our online contact form submissions are monitored daily, including weekends.</p>
+                </div>
+            </div>
+            
+             <section>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>1. What are your business hours?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our main office is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturdays from 9:00 AM to 2:00 PM. Field service hours vary by season, with our technicians typically available from 7:00 AM to 7:00 PM during peak seasons. Emergency services are available 24/7 with our on-call team. Administrative staff respond to emails and voicemails during business hours only. Our online contact form submissions are monitored daily, including weekends.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>2. How quickly can you respond to service requests?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard service requests are typically scheduled within 3-5 business days, depending on seasonality and location. Emergency requests receive priority and we aim to respond within 24 hours for critical issues. During peak seasons (spring and summer), response times may extend to 7-10 days for non-urgent matters. We offer expedited service for an additional fee. New installation consultations are usually scheduled within 1-2 weeks. Maintenance contract customers receive priority scheduling for all services.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>3. What areas do you serve?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our primary service area includes all five boroughs of New York City and surrounding counties within a 50-mile radius. We provide full services in Manhattan, Brooklyn, Queens, the Bronx, and Staten Island. Limited services are available in Westchester, Nassau, and parts of New Jersey. Special projects outside our normal area may be accommodated with travel fees. Commercial services have different coverage areas than residential. Check our website for the most current service area map and any temporary service restrictions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>4. How do I schedule a consultation?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Consultations can be scheduled by phone, email, or through our online contact form. We'll need basic information about your property and irrigation needs. A $75 consultation fee applies, which is credited toward any future services. Consultations typically last 60-90 minutes and include a site assessment. Evening and weekend appointments are available for an additional fee. For commercial properties, we recommend scheduling a pre-consultation phone call to discuss scope. Cancelations require 48 hours notice to avoid fees.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>5. What payment methods do you accept?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), checks, bank transfers, and cash. Credit card payments can be made online, by phone, or in person. Financing options are available for projects over $2,000 through our partner lenders. Commercial accounts may qualify for net-30 terms with approved credit. A 50% deposit is typically required for new installations. Recurring maintenance plans can be set up for automatic payments. Receipts and invoices are provided electronically unless otherwise requested.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>6. Do you offer emergency services?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide 24/7 emergency services for critical irrigation issues like major leaks, electrical hazards, or system failures that could cause property damage. Emergency service calls incur a $150 after-hours fee plus standard labor rates. Non-emergency issues reported after hours will be addressed the next business day. Our emergency line is (212) 555-0199. Response times vary by location and nature of emergency. Temporary repairs may be performed after hours with permanent fixes scheduled during normal hours. Maintenance contract customers receive priority emergency response.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>7. Can I get a quote over the phone?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We can provide rough estimates for standard services by phone, but accurate quotes require an on-site assessment. Basic service calls start at $95, while system installations range from $1,500-$15,000+ depending on complexity. Maintenance contracts are priced based on system size and service frequency. We offer free ballpark estimates for common projects if you can provide property details and photos. Final quotes are valid for 30 days. Seasonal discounts may be available - ask about current promotions. All quotes are provided in writing after assessment.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>8. What's included in your maintenance services?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our comprehensive maintenance includes seasonal start-up/shut-down, nozzle cleaning, pressure checks, controller programming, zone testing, leak detection, minor repairs, and efficiency optimization. We also inspect backflow devices, valves, and pipes. Maintenance visits include a detailed report with recommendations. Additional services like fertilization system checks or sensor calibration are available. Plans are customizable from monthly to annual visits. Priority scheduling and discounted repair rates are benefits of maintenance contracts. We track your system's history for proactive care.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>9. How long does installation typically take?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard residential installations take 1-3 days depending on property size and system complexity. Commercial projects may take 1-4 weeks. Factors affecting duration include soil conditions, landscaping features, and weather. We provide a projected timeline after the initial assessment. Some systems require multiple visits for different phases. Delays can occur due to permit approvals or unforeseen site conditions. We'll keep you informed of progress and any schedule changes. Most installations are completed within 2 weeks of signed contract and deposit.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>10. Do I need to be home during service?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Initial consultations and installations require your presence or an authorized representative. Routine maintenance can often be performed without you being home if we have gate/access codes. Some services like controller programming may need your input. We'll confirm access arrangements when scheduling. Our technicians are background-checked and uniformed for security. Pets should be secured during service visits. If you won't be present, please specify any special instructions in advance. We'll leave detailed service reports after each visit.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>11. What are your COVID-19 safety protocols?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We follow all local health guidelines and have implemented enhanced safety measures. Technicians wear masks when requested and maintain social distancing. Equipment is sanitized between jobs. Contactless service options are available including digital paperwork and payments. Sick employees are required to stay home. Outdoor services naturally allow for distancing. We're happy to discuss specific concerns and accommodate special requests. Our protocols are updated as guidelines evolve to ensure everyone's safety while maintaining service quality.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>12. Can I service my own system after installation?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We provide basic operation training with every installation and encourage simple maintenance like nozzle cleaning. However, complex repairs and winterization should be performed by professionals to maintain warranty coverage. DIY work that causes damage may void warranties. We offer maintenance classes seasonally for interested customers. Some system components require specialized tools and knowledge. Our technicians can identify which tasks are owner-friendly during your training. We're always available for consultation if you attempt your own repairs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>13. What warranties do you offer?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We provide a 1-year labor warranty on installations and a 90-day warranty on repairs. Equipment carries manufacturer warranties typically ranging from 2-5 years. Maintenance contract customers receive extended warranty benefits. Warranties require proper maintenance and don't cover damage from misuse, neglect, or natural events. Some components have prorated warranties. We'll handle all warranty claims on your behalf. Extended service agreements are available for purchase. Detailed warranty terms are provided with each contract and vary by product.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>14. How do I prepare for an installation?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Prior to installation, mark any underground utilities and clear the work area of obstructions. Ensure water access is available and notify us of any special site conditions. Decide on controller location and have your property survey available if needed. For landscaping projects, complete hardscaping first. Trim vegetation along proposed trench lines. Make arrangements for pets during work hours. Discuss any aesthetic concerns with our designer. We'll provide a detailed preparation checklist specific to your project after the consultation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>15. Do you work with landscapers or designers?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we frequently collaborate with landscape architects, designers, and contractors. We can work from your designer's plans or recommend trusted partners. Coordination meetings ensure seamless integration of irrigation with other landscape elements. We provide CAD-compatible system designs for architectural plans. Commercial projects often require this collaborative approach. Early involvement in the design process helps avoid costly changes later. We're happy to attend planning meetings or consult with your team. References from landscape partners are available upon request.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>16. What makes your irrigation systems different?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our AquaMistroot systems feature precision mist technology that promotes deeper root growth with less water waste. We use commercial-grade components even in residential installations for durability. Smart controllers adjust watering based on weather data. Our designs account for microclimates and soil variations across your property. Specialized nozzles deliver ideal droplet size for each plant type. Systems include leak detection and flow monitoring. We prioritize water conservation without sacrificing plant health. Ongoing research ensures we implement the latest water-saving technologies.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>17. Can you automate my existing system?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>In most cases, yes - we can retrofit existing systems with smart controllers, sensors, and efficient nozzles. The feasibility depends on your current system's condition and configuration. We'll assess compatibility and recommend cost-effective upgrades. Many older systems see 20-40% water savings after modernization. Partial upgrades are possible if budget is limited. Some components may need replacement to work with new technology. We can phase upgrades over multiple seasons. Even basic systems can often be automated with our adaptable solutions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>18. Do you offer commercial services?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide specialized irrigation services for commercial properties including office parks, campuses, HOAs, and municipal spaces. Commercial services include large-scale installations, central control systems, water management reporting, and after-hours maintenance. We're experienced with backflow prevention requirements and commercial water regulations. Dedicated account managers coordinate service for multi-property portfolios. Customized maintenance plans optimize water use across large landscapes. Volume discounts and specialized contracts are available for commercial clients.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>19. How do I winterize my system?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Winterization involves blowing out all water from pipes using compressed air, draining valves, and protecting above-ground components. This prevents freeze damage during cold months. We recommend professional winterization as improper techniques can damage systems. Service is typically scheduled October-November in our region. Maintenance contract customers receive priority scheduling. DIY winterization isn't covered by warranties. We also provide spring start-up services to check for winter damage and prepare systems for the growing season. Off-season discounts are often available.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>20. What water sources can you use?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We can design systems for municipal water, wells, ponds, or rainwater collection. Each source has different requirements for pumps, filtration, and treatment. Water quality testing helps determine needed components. Some sources may require permits or backflow prevention devices. We optimize systems for your specific water characteristics. Greywater systems have special design considerations. Multiple sources can be integrated with proper controls. We'll assess your available water sources during the consultation and recommend the most efficient configuration.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>21. Do you handle permits?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We manage all necessary permits for irrigation installations in jurisdictions where they're required. Permit costs are included in our quotes when applicable. The process typically takes 2-4 weeks depending on locality. Some areas require backflow prevention device testing permits annually - we can coordinate this for maintenance customers. Commercial projects often have more complex permitting needs. We stay current with local code changes affecting irrigation systems. Homeowner associations may have additional requirements we can help navigate. Never install without required permits.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>22. Can you help with water conservation?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Water conservation is central to our system designs. We incorporate weather-based controllers, soil moisture sensors, high-efficiency nozzles, and zone-specific programming. Our audits identify waste areas and optimization opportunities. Many clients see 30-50% water reduction after our upgrades. We're certified in water-efficient design practices. Rebates may be available for water-saving upgrades - we'll help identify programs. Drought-resistant landscaping advice complements our irrigation solutions. Conservation doesn't mean sacrificing landscape health with proper technology.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>23. What maintenance does my system need?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Basic maintenance includes seasonal start-up/shut-down, monthly visual inspections, nozzle cleaning, and adjusting schedules as plants mature. Annual professional service should check pressure, coverage, leaks, and controller function. Backflow devices require annual testing in many areas. Winterization is critical in cold climates. After storms, check for damage. Monitor water bills for unexpected increases indicating leaks. We provide customized maintenance checklists for each system. Neglecting maintenance leads to water waste, high repair costs, and plant stress. Proper care extends system life 10-15 years.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>24. How do smart controllers work?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Smart controllers use local weather data and property-specific parameters to automatically adjust watering. They connect to WiFi to access forecasts and can be controlled via smartphone apps. Soil moisture sensors provide real-time ground conditions. Advanced models learn your landscape's needs over time. Watering is skipped during rain and increased during heat waves. Usage data helps identify leaks or inefficiencies. We program them with your plant types, sun exposure, and soil conditions. Most pay for themselves in water savings within 2-3 years while improving plant health.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>25. What payment plans do you offer?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>For installations over $2,000, we offer financing through third-party lenders with approved credit. Typical terms are 6-60 months with fixed rates. A 50% deposit is required to schedule work, with the balance due upon completion. Commercial accounts may qualify for net-30 terms. Seasonal payment plans spread costs over several months. Some water conservation upgrades qualify for on-bill financing through utilities. We accept HSA/FSA payments for therapeutic landscape installations. Ask about current promotional financing offers with reduced rates.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>26. Can you repair other companies' installations?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we service all brands and types of irrigation systems, regardless of original installer. However, we can't warranty others' work and may need to modify non-standard installations for proper repair. Older or poorly installed systems may require upgrades for reliable operation. We'll provide an honest assessment of repair versus replacement options. Documentation of the original design helps with troubleshooting. Some proprietary systems have limited serviceability. We'll always recommend the most cost-effective solution for your situation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>27. How do I know if my system is leaking?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Signs of leaks include soggy areas when system is off, unexplained high water bills, low pressure, or constantly running pumps. Smart controllers with flow monitoring alert you to abnormal usage. Annual pressure tests can identify small leaks before they become major. Listen for hissing sounds at valves. Check meter readings when system should be off. Dying plants in one zone may indicate a leak depriving them of water. We offer leak detection services using specialized equipment. Even small leaks waste thousands of gallons annually - prompt repair pays dividends.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>28. What's your service area coverage policy?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our standard service area includes NYC and surrounding counties within a 50-mile radius of Manhattan. Locations beyond this may incur travel fees. Some remote areas have minimum service requirements. We occasionally adjust coverage based on technician availability and seasonality. Commercial accounts may have different coverage terms. Temporary service expansions sometimes occur for special projects. Check our website for current coverage maps. We're happy to recommend qualified providers for areas we don't serve. Expansion plans are reviewed annually.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>29. Do you offer organic landscaping services?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>While we specialize in irrigation, we partner with organic landscapers who handle fertilization and pest control. Our systems can deliver organic amendments through fertigation when properly designed. We prioritize water solutions that support organic practices like drought-resistant plantings. Smart irrigation reduces runoff that could carry chemicals. Many organic farms use our precise watering systems. We can recommend organic-compatible products for system maintenance. Our designs support healthy soil ecosystems essential for organic growing. Ask about our sustainable irrigation options.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>30. How energy efficient are your systems?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We design for maximum energy efficiency through proper pump sizing, zoning, and scheduling. Variable frequency drives optimize pump operation. Solar-powered controllers are available. Low-voltage systems minimize electricity use. Proper design reduces pump runtime significantly. We calculate lifecycle energy costs for commercial projects. Newer technologies like DC-powered valves further reduce consumption. Energy audits identify savings opportunities. Efficient systems often qualify for utility rebates. Proper maintenance maintains efficiency over time. Well-designed irrigation can be one of your landscape's most energy-efficient systems.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>31. What's your response time for repairs?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Emergency repairs are typically addressed within 24 hours, with many same-day responses when reported by 12pm. Standard repair requests are scheduled within 3-5 business days in season. Maintenance contract customers receive priority scheduling with most repairs completed within 48 hours. Response times may vary during peak seasons (May-August) or extreme weather events. We provide arrival windows and technician notifications for all scheduled repairs. Critical issues affecting property or safety receive immediate attention regardless of contract status.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="contact-info">
+                <p>AquaMistroot Garden Services</p>
+                <p>13 Washington Square S, New York, NY 10012</p>
+                <p>Phone: (212) 555-0198 | Email: info@aquamistroot.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </div>
+            <p class="copyright">© 2023 AquaMistroot Garden Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Toggle between + and - icons
+                const icon = question.querySelector('span:last-child');
+                icon.textContent = faqItem.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Form Submission Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = new FormData(this);
+            const formValues = Object.fromEntries(formData.entries());
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', formValues);
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

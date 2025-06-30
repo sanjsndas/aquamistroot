@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | AquaMistroot</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Color Theme */
+        :root {
+            --primary: #88c9d1;
+            --secondary: #5a8f7b;
+            --accent: #e6f4f1;
+            --dark: #2c4a3e;
+            --light: #f8fbfa;
+            --text: #333333;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin: 20px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Cookie Policy Content */
+        .policy-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .contact-point {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-point h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .cookie-consent p {
+            margin-bottom: 0;
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .accept-btn {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .decline-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .slogan {
+                font-size: 1.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent p {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="p1.png" alt="AquaMistroot Logo" class="logo">
+        <h1>Cookie Policy</h1>
+        <p class="slogan">Fine mist. Firm roots.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0" aria-current="page">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="cookie-policy">
+            <div class="policy-content">
+                <h2>Our Cookie Policy</h2>
+                <p>Last updated: June 28, 2023</p>
+                
+                <div class="policy-section">
+                    <h3>Introduction</h3>
+                    <p>At AquaMistroot Garden Services, we believe in being transparent about how we collect and use data related to you. This cookie policy provides detailed information about how and when we use cookies on our website. This policy applies to any AquaMistroot product or service that links to this policy or incorporates it by reference.</p>
+                    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners. We use cookies to enhance your experience on our site, analyze site usage, and assist in our marketing efforts.</p>
+                    <p>By continuing to browse our website, you are agreeing to our use of cookies in accordance with this policy. If you do not agree to our use of cookies, you can adjust your browser settings to reject cookies or use the cookie consent tool provided on our website.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Types of Cookies We Use</h3>
+                    <p>We use several types of cookies for different purposes:</p>
+                    
+                    <div class="contact-point">
+                        <h4>1. Essential Cookies</h4>
+                        <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>2. Performance Cookies</h4>
+                        <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>3. Functional Cookies</h4>
+                        <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>4. Targeting Cookies</h4>
+                        <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store direct personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>5. Social Media Cookies</h4>
+                        <p>These cookies are set by a range of social media services that we have added to the site to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. If you do not allow these cookies you may not be able to use or see these sharing tools.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Detailed Contact-Related Points About Our Cookie Usage</h3>
+                    
+                    <div class="contact-point">
+                        <h4>6. Cookie Duration</h4>
+                        <p>The cookies we use have varying lifespans. Session cookies are temporary and expire when you close your browser. Persistent cookies remain on your device until they expire or you delete them. The expiration period for persistent cookies ranges from a few days to several years depending on their purpose. We regularly review the cookies we use and their duration to ensure we're not keeping them longer than necessary.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>7. First-Party Cookies</h4>
+                        <p>First-party cookies are set by our website domain and can only be read by our site. We use these for essential functions like maintaining your session as you navigate our site, remembering your preferences, and providing features you've requested. These cookies don't track your activity across other websites and are generally considered less intrusive than third-party cookies.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>8. Third-Party Cookies</h4>
+                        <p>Third-party cookies are set by domains other than ours, typically by our partners and service providers. These include analytics services like Google Analytics, advertising networks, and social media platforms. These cookies may track your browsing across multiple sites to build a profile of your interests. We carefully select third-party providers who respect user privacy and provide clear opt-out mechanisms.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>9. Cookie Consent</h4>
+                        <p>We obtain your consent to use cookies through our cookie banner when you first visit our site. You can change your cookie preferences at any time by clicking the "Cookie Settings" link in the footer of our website. Your preferences are remembered for future visits through a consent cookie. If you delete this cookie or use a different browser/device, you'll be asked for your consent again.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>10. Cookie Management</h4>
+                        <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work. Most browsers provide instructions on how to manage cookies in their "Help" sections.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>11. Analytics Cookies</h4>
+                        <p>We use Google Analytics cookies to collect information about how visitors use our website. These cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from, and the pages they visited. We use this information to compile reports and to help us improve the site. The cookies collect information in a way that does not directly identify anyone.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>12. Advertising Cookies</h4>
+                        <p>We may use advertising cookies to deliver ads that we believe are relevant to you and your interests. These cookies remember that you visited our website and this information may be shared with other organizations such as advertisers. They may also be used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaign.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>13. Preference Cookies</h4>
+                        <p>Preference cookies enable our website to remember information that changes the way the site behaves or looks, like your preferred language or the region that you are in. For instance, if you've selected to view the site in French on a previous visit, a preference cookie will remember this setting for future visits.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>14. Security Cookies</h4>
+                        <p>We use security cookies to authenticate users, prevent fraudulent use of login credentials, and protect user data from unauthorized parties. For example, we may use cookies that allow us to identify your device for login authentication purposes. These cookies are essential for the security of our website and services.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>15. Load Balancing Cookies</h4>
+                        <p>To ensure our website remains available and responsive, we may use load balancing cookies that help distribute user traffic across multiple servers. These cookies don't store personal information but help optimize the performance and reliability of our website, especially during peak usage times.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>16. Cookie Expiration</h4>
+                        <p>Different cookies have different expiration periods. Session cookies expire when you close your browser. Persistent cookies have varying lifespans ranging from a few days to several years. We set expiration periods based on the purpose of the cookie - essential cookies may have longer durations while analytics cookies typically expire after a shorter period.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>17. Cookie Storage</h4>
+                        <p>Cookies are stored in your web browser's storage space. Each browser manages this storage differently. Modern browsers typically allow you to see what cookies are stored, delete specific cookies, or block cookies from specific sites. The storage capacity for cookies is limited (usually around 4KB per cookie) and browsers may impose limits on the total number of cookies stored.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>18. Cookie Security</h4>
+                        <p>We implement several security measures for our cookies. Secure cookies are transmitted over encrypted HTTPS connections. HttpOnly cookies cannot be accessed by client-side scripts, reducing cross-site scripting risks. SameSite cookie attributes help protect against cross-site request forgery attacks. We regularly review cookie security as part of our overall website security assessments.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>19. Cookie Auditing</h4>
+                        <p>We conduct regular cookie audits to ensure our cookie usage remains compliant with privacy regulations and aligned with our privacy commitments. These audits review all cookies set by our website, their purposes, durations, and the data they collect. Based on audit findings, we may remove unnecessary cookies or adjust their settings to enhance privacy protection.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>20. Cookie Policy Updates</h4>
+                        <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technologies, legal requirements, or other factors. When we make changes, we'll update the "Last Updated" date at the top of this policy. We encourage you to periodically review this policy to stay informed about our use of cookies. Your continued use of our website after any changes indicates your acceptance of the updated policy.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>21. Cookie Opt-Out</h4>
+                        <p>In addition to browser controls, you can opt out of specific types of cookies. For analytics cookies, you can install the Google Analytics opt-out browser add-on. For advertising cookies, you can visit the Digital Advertising Alliance's opt-out page or the Network Advertising Initiative's opt-out page. These opt-outs are specific to each browser and device.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>22. Cookie Performance Impact</h4>
+                        <p>We carefully consider the performance impact of cookies on your browsing experience. Our cookies are designed to be lightweight and efficient. We minimize the number of cookies used and regularly review their impact on page load times. Performance cookies actually help us improve site speed by identifying optimization opportunities based on real user metrics.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>23. Cookie and Mobile Apps</h4>
+                        <p>While this policy focuses on website cookies, similar technologies are used in mobile applications. Our mobile apps may use device identifiers and other technologies for similar purposes as cookies on websites. These are governed by our Privacy Policy and the permissions you grant through your mobile device's operating system.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>24. Cookie and GDPR Compliance</h4>
+                        <p>We comply with the EU General Data Protection Regulation (GDPR) regarding cookies. This means we obtain clear consent before setting non-essential cookies, provide detailed information about cookie usage, and make it easy for users to withdraw consent. Our cookie consent mechanism records user preferences to demonstrate compliance with GDPR requirements.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>25. Cookie and CCPA Compliance</h4>
+                        <p>For California residents under the California Consumer Privacy Act (CCPA), we provide specific disclosures about cookie data collection and use. The CCPA considers some cookie data as personal information, and California residents have the right to opt-out of the sale of their personal information, which may include certain cookie data shared with advertising partners.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>26. Cookie and ePrivacy Directive</h4>
+                        <p>We comply with the EU ePrivacy Directive (Cookie Law) which requires prior consent for non-essential cookies. Our cookie banner provides clear information and options before these cookies are set. We maintain records of consent and ensure our cookie practices align with European data protection standards.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>27. Cookie Data Sharing</h4>
+                        <p>We limit sharing of data collected through cookies. Some third-party cookies may share data with their providers as described in their privacy policies. We carefully select partners who commit to responsible data practices. We don't sell cookie data to data brokers or allow indiscriminate tracking across unrelated sites.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>28. Cookie and Personal Data</h4>
+                        <p>Most cookies we use don't directly identify individuals. However, when combined with other information (like account login details), cookie data could become personally identifiable. We minimize this risk by keeping different data types separate where possible and applying appropriate security measures to all personal data processing.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>29. Cookie and Session Management</h4>
+                        <p>Session cookies are essential for maintaining your authenticated session on our website. These cookies contain a unique identifier but don't store personal information in the cookie itself. They help maintain your login state and protect against session hijacking attempts. Session cookies automatically expire when you close your browser or after a period of inactivity.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>30. Cookie and Forms</h4>
+                        <p>We may use cookies to remember information you've entered in forms so you don't have to re-enter it if you navigate away from the page and return. These cookies are temporary and only store the information until you submit the form or close the browser. They help improve user experience while minimizing data retention.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>31. Cookie and A/B Testing</h4>
+                        <p>We occasionally use cookies for A/B testing different versions of our website to determine which designs and content perform best. These cookies randomly assign you to a test group and maintain consistency as you navigate the site. All test data is analyzed in aggregate without identifying individual users.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>32. Cookie and Affiliate Tracking</h4>
+                        <p>If you reach our site through an affiliate link, we may use cookies to track the referral for commission purposes. These cookies typically store the affiliate ID and timestamp but don't contain personal information. They help ensure affiliates receive proper credit for referring customers to our services.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>33. Cookie and Error Tracking</h4>
+                        <p>We may use cookies to help identify and track errors that occur on our website. These cookies can help our technical team reproduce issues by recording information about your browser, device, and the state of the application when an error occurred. This information is used solely for debugging and quality improvement purposes.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>34. Cookie and Multilingual Support</h4>
+                        <p>For visitors accessing our multilingual content, we use cookies to remember your language preference. This allows us to serve content in your preferred language on subsequent visits without requiring you to reselect your language option. The cookie only stores your language code (e.g., "en" for English) without additional personal data.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>35. Cookie and Accessibility Settings</h4>
+                        <p>If you adjust accessibility settings on our website (such as font size or color contrast), we may use cookies to remember these preferences for future visits. These cookies help us provide a consistent, accessible experience tailored to your needs without requiring you to reset preferences each time you visit.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>36. Cookie and Geolocation</h4>
+                        <p>We may use cookies to store generalized geographic information (at the city or regional level) to provide location-relevant content, such as showing services available in your area. This geolocation is approximate and doesn't store precise location data unless explicitly permitted by you for specific features.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>37. Cookie and Social Sharing</h4>
+                        <p>When you use social sharing buttons on our site, the social media platforms may set cookies to enable the sharing function and track the effectiveness of these features. We don't control these third-party cookies but provide information about them in our cookie policy. You can block these cookies while still being able to share content by using the platform's share URLs directly.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>38. Cookie and Video Content</h4>
+                        <p>If our site includes embedded video content (e.g., from YouTube), these third-party services may set cookies to enable playback, remember preferences, and track viewing statistics. We use privacy-enhanced modes where available to minimize tracking, but you may need to adjust your settings directly with these providers for full control over their cookie usage.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>39. Cookie and Chat Support</h4>
+                        <p>If you use our live chat support feature, the chat software may use cookies to maintain your chat session, remember your details if you return, and help our support team provide better service. These cookies are deleted when the chat session ends, unless you choose to have your information remembered for future contacts.</p>
+                    </div>
+                    
+                    <div class="contact-point">
+                        <h4>40. Cookie and Policy Acceptance</h4>
+                        <p>We use a cookie to remember your acceptance of our cookie policy and privacy policy so you aren't repeatedly asked to confirm your preferences. This cookie stores only your acceptance status and the date of acceptance. If you delete this cookie or use a different browser, you'll be presented with the consent banner again on your next visit.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Managing Your Cookie Preferences</h3>
+                    <p>You have several options to manage cookies on our website:</p>
+                    <ul>
+                        <li><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings. You can usually find these in the "Options" or "Preferences" menu of your browser. Common options include accepting all cookies, rejecting all cookies, or being notified when a cookie is set.</li>
+                        <li><strong>Cookie Consent Tool:</strong> Our cookie consent banner and preference center allow you to selectively enable or disable different categories of cookies (except essential ones which are required for the site to function).</li>
+                        <li><strong>Third-Party Opt-Outs:</strong> For advertising and analytics cookies set by third parties, you can often opt out directly with those providers through their websites or industry opt-out platforms.</li>
+                        <li><strong>Private Browsing:</strong> Using your browser's private browsing mode (e.g., Incognito in Chrome, Private Window in Firefox) will prevent cookies from being stored after your session ends.</li>
+                    </ul>
+                    <p>Please note that if you disable cookies entirely, some features of our website may not function properly. Essential functions will still work, but personalized features and preferences won't be saved between visits.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Contact Us About Cookies</h3>
+                    <p>If you have any questions or concerns about our use of cookies, please contact our Data Protection Officer:</p>
+                    <ul>
+                        <li>By email: privacy@aquamistroot.com</li>
+                        <li>By mail: Data Protection Officer, AquaMistroot Garden Services, 13 Washington Square S, New York, NY 10012, USA</li>
+                        <li>By phone: (212) 555-0198 (ask for the Privacy Team)</li>
+                    </ul>
+                    <p>We're committed to working with you to address any privacy concerns you may have. For general inquiries about our services, please use our main contact channels listed elsewhere on this website.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms & conditions</a>
+                <a href="cookies.html">Cookies</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            
+            <div class="contact-info">
+                <p><strong>AquaMistroot Garden Services</strong></p>
+                <p>13 Washington Square S, New York, NY 10012, USA</p>
+                <p>Phone: (212) 555-0198 | Email: info@aquamistroot.com</p>
+            </div>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> The information contained in this cookie policy is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.</p>
+            </div>
+            
+            <p class="copyright">© 2023 AquaMistroot Garden Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of all cookies in accordance with our Cookie Policy. You can manage your preferences at any time.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-btn" id="acceptCookies">Accept</button>
+            <button class="cookie-btn decline-btn" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptBtn = document.getElementById('acceptCookies');
+            const declineBtn = document.getElementById('declineCookies');
+            
+            // Check if cookie consent was already given
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieConsent.style.display = 'flex';
+            }
+            
+            // Accept cookies
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.style.display = 'none';
+                // Here you would also set your analytics/other cookies
+            });
+            
+            // Decline cookies (only essential cookies will be set)
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieConsent.style.display = 'none';
+                // Here you would prevent non-essential cookies from being set
+            });
+        });
+    </script>
+</body>
+</html>
